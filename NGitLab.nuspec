@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>gitlab-ci.net</id>
+	<title>gitlab-ci.net</title>
+    <version>1.0.0.0</version>
+    <authors>Michel Courtine</authors>
+    <owners>Michel Courtine</owners>
+    <summary>Provides a .NET REST client implementation of GitLab Ci API.</summary>
+    <description>Provides a .NET REST client implementation of GitLab Ci API with no external dependencies. Uses the private token authentication</description>
+    <projectUrl>https://raw.githubusercontent.com/michaKFromParis/gitlab-ci.net</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/michaKFromParis/gitlab-ci.net/master/LICENCE</licenseUrl>
+    <tags>GitLab Ci .NET gitlab-ci API Rest gitlab-ci.net michaK</tags>
+    <language>en-US</language>
+    <releaseNotes>
+      * 1.0.0.0 - initial commit. Only Project operations are supported
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="gitlab-ci.net\gitlab-ci.net\bin\Release\gitlab-ci.net.dll" target="lib\net45" />
+  </files>
+</package>
