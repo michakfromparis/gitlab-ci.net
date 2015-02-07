@@ -1,14 +1,14 @@
 What is gitlab-ci.net?
 =============
 
-*gitlab-ci.net* is a .NET REST client implementation of the GitLab Ci API with no external dependencies.
+**gitlab-ci.net** is a .net rest client implementation of the GitLab Ci API with no external dependencies.
 
 Usage
 =============
 
-It's a wrapper of the REST api. Read the [GitLab docs](https://github.com/gitlabhq/gitlab-ci/tree/master/doc/api) and start using by 
+**gitlab-ci.net** is a wrapper of the REST api. See the [GitLabCi docs](https://github.com/gitlabhq/gitlab-ci/tree/master/doc/api) or quickstart by 
 
-Creating a GitLabCiClient instance:
+- Creating a GitLabCiClient instance:
 
 ```csharp
 
@@ -17,7 +17,7 @@ var client =  GitLabCiClient.Connect("https://mygitlab-ci.example.com", "https:/
 
 Then use its properties. You can obtain the private token in your account page. You may want to create a custom user for the API usage.
 
-Listing all the projects:
+- Listing all the projects:
 
 ```csharp
 
@@ -46,7 +46,7 @@ Listing all the projects:
   }
 ```
 
-Nuget
+NuGet
 =============
 
 Get it from NuGet. You can simply install it with the Package Manager console:
@@ -55,7 +55,9 @@ Get it from NuGet. You can simply install it with the Package Manager console:
 
 Status
 =============
-*gitlab-ci.net* currently only supports Projects listing / creation but it is very easy to extend. It me up if you need anything added. Won't take me long to respond.
+**gitlab-ci.net** currently only supports Projects operations but it is very easy to extend.
+
+Hit me up if you need anything added. Won't take me long to respond.
 
 Credits
 =============
