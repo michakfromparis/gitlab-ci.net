@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace GitlabCi.Models
+namespace Gitlab.Ci.Models
 {
     [DataContract]
-    public class ProjectCreate
+    public class CiProjectCreate
     {
         [Required]
         [DataMember(Name = "name")]

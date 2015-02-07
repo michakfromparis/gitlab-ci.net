@@ -1,4 +1,4 @@
-﻿namespace GitlabCi.Impl
+﻿namespace Gitlab.Ci.Impl
 {
     public enum MethodType
     {

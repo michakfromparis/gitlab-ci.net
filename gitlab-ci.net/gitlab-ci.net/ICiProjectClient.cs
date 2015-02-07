@@ -1,28 +1,28 @@
 ﻿using System.Collections.Generic;
-using GitlabCi.Models;
+using Gitlab.Ci.Models;
 
-namespace GitlabCi
+namespace Gitlab.Ci
 {
-    public interface IProjectClient
+    public interface ICiProjectClient
     {
         /// <summary>
         /// Get a list of projects accessible by the authenticated user.
         /// </summary>
-        IEnumerable<Project> Accessible { get; }
+        IEnumerable<CiProject> Accessible { get; }
 
         /// <summary>
         /// Get a list of projects owned by the authenticated user.
         /// </summary>
-        IEnumerable<Project> Owned { get; }
+        IEnumerable<CiProject> Owned { get; }
 
         /// <summary>
         /// Get a list of all GitLab projects (admin only).
         /// </summary>
-        IEnumerable<Project> All { get; }
+        IEnumerable<CiProject> All { get; }
 
-        Project this[int id] { get; }
+        CiProject this[int id] { get; }
 
-        Project Create(ProjectCreate project);
+        CiProject Create(CiProjectCreate project);
         
         void Delete(int id);
     }

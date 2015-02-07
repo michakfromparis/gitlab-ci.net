@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 
-namespace GitlabCi.Impl
+namespace Gitlab.Ci.Impl
 {
     public class HttpRequestor
     {

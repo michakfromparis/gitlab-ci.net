@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace GitlabCi.Impl
+namespace Gitlab.Ci.Impl
 {
     [DebuggerStepThrough]
     public class API

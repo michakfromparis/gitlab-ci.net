@@ -62,7 +62,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace GitlabCi.Impl
+namespace Gitlab.Ci.Impl
 {
 // ReSharper disable LoopCanBeConvertedToQuery
 // ReSharper disable RedundantExplicitArrayCreation

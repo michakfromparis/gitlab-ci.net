@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace GitlabCi.Models
+namespace Gitlab.Ci.Models
 {
     [DataContract]
-    public class Project
+    public class CiProject
     {
         public const string Url = "/projects";
 

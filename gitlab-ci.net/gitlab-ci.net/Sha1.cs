@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GitlabCi
+namespace Gitlab.Ci
 {
     /// <summary>
     /// Sha1 hash value representation.
