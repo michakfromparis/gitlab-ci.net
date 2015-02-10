@@ -49,9 +49,9 @@ namespace Gitlab.Ci.Impl
             return _api.Post().With(project).To<CiProject>(CiProject.Url + "/");
         }
 
-        public bool Delete(int id)
+        public CiProject Delete(int id)
         {
-            return _api.Delete().To<bool>(CiProject.Url + "/" + id);
+            return _api.Delete().To<CiProject>(CiProject.Url + "/" + id);
         }
     }
 }

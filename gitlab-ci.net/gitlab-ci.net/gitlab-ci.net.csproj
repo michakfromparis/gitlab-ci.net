@@ -53,6 +53,8 @@
     <Compile Include="Models\CiProjectCreate.cs" />
     <Compile Include="Impl\CiProjectClient.cs" />
     <Compile Include="GitLabCiClient.cs" />
+    <Compile Include="Models\CiJob.cs" />
+    <Compile Include="Models\CiJobCreate.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

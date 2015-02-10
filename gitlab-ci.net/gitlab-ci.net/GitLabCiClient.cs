@@ -6,8 +6,8 @@ namespace Gitlab.Ci
 	{
 		private GitLabCiClient(string hostUrl, string gitlabUrl, string apiToken)
 		{
-			_api = new API(hostUrl, gitlabUrl, apiToken);
-			Projects = new CiProjectClient(_api);
+            GitLabCiClient.Api = new API(hostUrl, gitlabUrl, apiToken);
+            Projects = new CiProjectClient(Api);
 		}
 
 		public static GitLabCiClient Connect(string hostUrl, string gitlabUrl, string apiToken)
@@ -15,7 +15,7 @@ namespace Gitlab.Ci
 			return new GitLabCiClient(hostUrl, gitlabUrl, apiToken);
 		}
 
-		private readonly API _api;
+        public static API Api;
 
 		public readonly ICiProjectClient Projects;
 	}

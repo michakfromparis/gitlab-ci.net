@@ -24,6 +24,6 @@ namespace Gitlab.Ci
 
         CiProject Create(CiProjectCreate project);
         
-        bool Delete(int id);
+        CiProject Delete(int id);
     }
 }
