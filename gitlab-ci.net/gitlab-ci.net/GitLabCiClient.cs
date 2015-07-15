@@ -8,6 +8,7 @@ namespace Gitlab.Ci
 		{
             GitLabCiClient.Api = new API(hostUrl, gitlabUrl, apiToken);
             Projects = new CiProjectClient(Api);
+            Runners = new CiRunnerClient(Api);
 		}
 
 		public static GitLabCiClient Connect(string hostUrl, string gitlabUrl, string apiToken)
@@ -17,6 +18,8 @@ namespace Gitlab.Ci
 
         public static API Api;
 
-		public readonly ICiProjectClient Projects;
+        public readonly ICiProjectClient Projects;
+
+        public readonly ICiRunnerClient Runners;
 	}
 }
