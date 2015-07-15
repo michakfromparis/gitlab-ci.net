@@ -43,34 +43,5 @@ namespace Gitlab.Ci.Models
 		[DataMember(Name = "gitlab_id")]
 		public int GitlabId;
 
-        public IEnumerable<CiJob> Jobs
-        {
-            get
-            {
-                return GitLabCiClient.Api.Get().GetAll<CiJob>(CiProject.Url + "/" + Id + "/jobs");
-            }
-        }
-
-        public CiJob CreateJob(string name, string commands)
-        {
-            CiJobCreate job = new CiJobCreate();
-            job.Name = name;
-            job.Commands = commands;
-            return CreateJob(job);
-        }
-
-        public CiJob CreateJob(CiJobCreate job)
-        {
-            return GitLabCiClient.Api.Post().With(job).To<CiJob>(CiProject.Url + "/" + Id + "/jobs");
-        }
-
-        public CiJob DeleteJob(int id)
-        {
-            return GitLabCiClient.Api.Delete().To<CiJob>(CiProject.Url + "/" + Id + "/jobs/" + id);
-        }
-		public override string ToString ()
-		{
-			return string.Format ("[Project #{0}] \"{1}\" at \"{2}\"", Id, Name, GitlabUrl);
-		}
 	}
 }
