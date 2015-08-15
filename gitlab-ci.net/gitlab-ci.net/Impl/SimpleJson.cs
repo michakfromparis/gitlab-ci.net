@@ -532,7 +532,7 @@ namespace Gitlab.Ci.Impl
             object obj;
             if (TryDeserializeObject(json, out obj))
                 return obj;
-            throw new SerializationException("Invalid JSON string");
+            throw new SerializationException("Invalid json response: " + json);
         }
 
         /// <summary>

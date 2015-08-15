@@ -13,12 +13,12 @@ namespace Gitlab.Ci
         /// <summary>
         /// Get a list of projects owned by the authenticated user.
         /// </summary>
-        IEnumerable<CiRunner> Owned { get; }
+//        IEnumerable<CiRunner> Owned { get; }
 
         /// <summary>
         /// Get a list of all GitLab projects (admin only).
         /// </summary>
-        IEnumerable<CiRunner> All { get; }
+//        IEnumerable<CiRunner> All { get; }
 
         CiRunner this[int id] { get; }
 

@@ -39,7 +39,9 @@ namespace Gitlab.Ci.Impl
 
         public void Stream(string tailAPIUrl, Action<Stream> parser)
         {
-            var req = SetupConnection(_root.GetAPIUrl(tailAPIUrl));
+            var url = _root.GetAPIUrl(tailAPIUrl);
+
+            var req = SetupConnection(url);
 
             if (HasOutput())
             {
@@ -219,6 +221,7 @@ namespace Gitlab.Ci.Impl
 
         private static WebRequest SetupConnection(Uri url, MethodType methodType)
         {
+            System.Diagnostics.Trace.WriteLine(url);
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = methodType.ToString().ToUpperInvariant();
             request.Headers.Add("Accept-Encoding", "gzip");
